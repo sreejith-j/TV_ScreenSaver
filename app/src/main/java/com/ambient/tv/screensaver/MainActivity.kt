@@ -60,6 +60,13 @@ class MainActivity : AppCompatActivity() {
         updateCardSummaries()
     }
 
+    override fun onUserLeaveHint() {
+        super.onUserLeaveHint()
+        // Cleanly finish when the user presses Home on the TV remote
+        // so the activity never lingers behind the launcher in the back stack.
+        finish()
+    }
+
     private fun initViews() {
         cardPreview = findViewById(R.id.cardPreview)
         cardDreamSettings = findViewById(R.id.cardDreamSettings)
