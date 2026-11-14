@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ambientRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Ambient Breathing Aura Layer (Optional Ambient Glow) -->
+    <com.ambient.tv.screensaver.ui.AmbientAuraView
+        android:id="@+id/ambientAuraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Live Weather Particle Effects Layer -->
+    <com.ambient.tv.screensaver.ui.WeatherParticleView
+        android:id="@+id/weatherParticleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Drifting Content Container for Burn-in Protection -->
+    <LinearLayout
+        android:id="@+id/ambientContentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- 1. Horizontal Minimal Clock -->
+        <LinearLayout
+            android:id="@+id/layoutHorizontalClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvClockHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:includeFontPadding="false"
+                android:text="12:45"
+                android:textColor="@color/text_primary"
+                android:textSize="115sp" />
+
+            <TextView
+                android:id="@+id/tvAmPm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="PM"
+                android:textColor="@color/text_accent"
+                android:textSize="26sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- 2. Stacked Modern Pixel Clock -->
+        <LinearLayout
+            android:id="@+id/layoutStackedClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvClockHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:includeFontPadding="false"
+                android:text="12"
+                android:textColor="@color/text_primary"
+                android:textSize="125sp" />
+
+            <TextView
+                android:id="@+id/tvClockMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:includeFontPadding="false"
+                android:text="45"
+                android:textColor="@color/text_accent"
+                android:textSize="125sp" />
+        </LinearLayout>
+
+        <!-- 3. Minimalist Analog Clock -->
+        <LinearLayout
+            android:id="@+id/layoutAnalogClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.ambient.tv.screensaver.ui.AmbientAnalogClockView
+                android:id="@+id/analogClockView"
+                android:layout_width="260dp"
+                android:layout_height="260dp" />
+        </LinearLayout>
+
+        <!-- 4. Cyber Dot Matrix Clock -->
+        <LinearLayout
+            android:id="@+id/layoutDotMatrixClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvClockDotMatrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.08"
+                android:text="12:45:00"
+                android:textColor="@color/text_accent"
+                android:textSize="85sp" />
+
+            <TextView
+                android:id="@+id/tvAmPmDotMatrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="monospace"
+                android:text="PM"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- Date & Weather Primary Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Saturday, Nov 14"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:text="•"
+                android:textColor="@color/text_secondary"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/ivWeatherIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Weather icon"
+                android:src="@drawable/ic_weather_clear" />
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="26°C"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!-- Weather Condition & Location -->
+        <TextView
+            android:id="@+id/tvWeatherSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Clear Sky"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp" />
+
+        <!-- Detailed Forecast Row (Feels Like • High / Low • Humidity) -->
+        <TextView
+            android:id="@+id/tvWeatherDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Feels 26°C  •  H: 30°C  L: 20°C  •  💧 55%"
+            android:textColor="@color/text_tertiary"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</FrameLayout>

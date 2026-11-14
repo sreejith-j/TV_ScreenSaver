@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Dark ambient background -->
+    <path
+        android:fillColor="#111318"
+        android:pathData="M0,0h320v180h-320z" />
+    <!-- Ambient subtle glow -->
+    <path
+        android:fillColor="#1F2430"
+        android:pathData="M160,20a70,70 0 1,0 0.1,0z" />
+    <!-- Clock circle -->
+    <path
+        android:fillColor="#283042"
+        android:pathData="M160,45a45,45 0 1,0 0.1,0z" />
+    <!-- Clock hands -->
+    <path
+        android:fillColor="#8AB4F8"
+        android:pathData="M158,55h4v35h-4z" />
+    <path
+        android:fillColor="#8AB4F8"
+        android:pathData="M160,86l22,-12 2,3.5 -22,12z" />
+    <!-- Sun accent -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M210,50a12,12 0 1,0 0.1,0z" />
+</vector>
+

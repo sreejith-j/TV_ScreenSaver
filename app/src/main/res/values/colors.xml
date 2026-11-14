@@ -1,0 +1,22 @@
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_black">#000000</color>
+    <color name="bg_card">#1A1A1A</color>
+    <color name="bg_card_focused">#2E3238</color>
+    <color name="border_focused">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9E9E9E</color>
+    <color name="text_tertiary">#666666</color>
+    <color name="text_accent">#8AB4F8</color> <!-- Google / Android Ambient Blue -->
+    <color name="text_warm">#FDD835</color> <!-- Warm sun yellow -->
+    
+    <!-- Weather condition tints -->
+    <color name="weather_sun">#FFD54F</color>
+    <color name="weather_cloud">#B0BEC5</color>
+    <color name="weather_rain">#64B5F6</color>
+    <color name="weather_snow">#E0E0E0</color>
+    <color name="weather_thunder">#FFB74D</color>
+</resources>
+

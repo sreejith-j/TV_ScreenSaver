@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Ambient TV</string>
+    <string name="screensaver_name">Ambient Clock &amp; Weather</string>
+    <string name="screensaver_description">Modern ambient clock with live weather and burn-in protection.</string>
+    
+    <!-- UI Labels -->
+    <string name="title_preview">Preview Screensaver</string>
+    <string name="desc_preview">See how the ambient clock looks on your TV right now</string>
+    <string name="title_settings">TV Screensaver Settings</string>
+    <string name="desc_settings">Choose Ambient TV as your default screensaver</string>
+    
+    <string name="title_format">Time Format</string>
+    <string name="desc_format_12">12-Hour format (e.g. 02:45 PM)</string>
+    <string name="desc_format_24">24-Hour format (e.g. 14:45)</string>
+
+    <string name="title_clock_style">Clock Layout</string>
+    <string name="desc_style_horizontal">Minimal Horizontal</string>
+    <string name="desc_style_stacked">Stacked Modern</string>
+
+    <string name="title_unit">Temperature Unit</string>
+    <string name="desc_unit_celsius">Celsius (°C)</string>
+    <string name="desc_unit_fahrenheit">Fahrenheit (°F)</string>
+
+    <string name="title_burnin">Burn-in Protection</string>
+    <string name="desc_burnin_enabled">Pixel shifting every 2 mins (Recommended for OLED/LED)</string>
+    <string name="desc_burnin_disabled">Fixed center position</string>
+
+    <string name="weather_loading">Updating weather…</string>
+    <string name="weather_fallback">Weather unavailable</string>
+</resources>
+
